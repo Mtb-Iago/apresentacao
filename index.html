@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -29,20 +33,40 @@
       <!-- HERO -->
       <section class="hero" id="home">
         <div class="container hero__content">
-          <img id="avatar" class="hero__avatar" src="https://github.com" alt="Foto de perfil de Iago Oliveira" />
+          <img
+            id="avatar"
+            class="hero__avatar"
+            src="https://github.com"
+            alt="Foto de perfil de Iago Oliveira"
+          />
           <h2 class="hero__title">Iago Oliveira</h2>
           <p class="hero__subtitle">
-            Engenheiro de Software focado em IA, automação e sistemas escaláveis.
+            Engenheiro Senior de Software, focado em IA, automação e sistemas
+            escaláveis.
           </p>
           <div class="hero__actions">
-            <a href="#projects" class="btn btn--primary">Ver Projetos</a>
+            <a href="#projects" class="btn btn--primary">
+              <i class="fa-solid fa-code"></i>
+              <span>Projetos</span>
+            </a>
+
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/iago-oliveira-2949211b7/"
               target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn--ghost"
-              >LinkedIn</a
+              class="btn btn--linkedin"
             >
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+
+            <a
+              href="https://github.com/Mtb-Iago"
+              target="_blank"
+              class="btn btn--github"
+            >
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
           </div>
         </div>
       </section>
@@ -54,10 +78,7 @@
             <h2 class="section__title">Projetos</h2>
             <p class="hero__subtitle">Principais trabalhos e repositórios</p>
           </header>
-          <!-- O Flexbox vai organizar os cards dentro desta div -->
-          <div class="grid" id="projectList">
-            <!-- Os cards serão inseridos aqui pelo script.js -->
-          </div>
+          <div class="grid" id="projectList"></div>
         </div>
       </section>
 
@@ -66,19 +87,23 @@
         <div class="container">
           <header class="section__header">
             <h2 class="section__title">Contato</h2>
-            <p class="hero__subtitle">Vamos conversar sobre o seu próximo projeto?</p>
+            <p class="hero__subtitle">Vamos conversar sobre tecnologia?</p>
           </header>
-          
+
           <div class="contact-wrapper">
-            <address style="font-style: normal;">
+            <address class="contact">
               <a href="mailto:iagooliveira09@outlook.com" class="contact-item">
-                iagooliveira09@outlook.com
+                <i class="fa-solid fa-envelope"></i>
+                <span>iagooliveira09@outlook.com</span>
               </a>
             </address>
-            
-            <a href="tel:+5577988162530" class="contact-item">
-              <span id="phone">77-988162530</span>
-            </a>
+
+            <address>
+              <a href="tel:+5577988162530" class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>77 98816-2530</span>
+              </a>
+            </address>
           </div>
         </div>
       </section>
