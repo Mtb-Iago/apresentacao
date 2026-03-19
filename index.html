@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iago Oliveira | Engenheiro de Software</title>
+    <!-- Link para o Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header__inner">
+        <h1 class="logo">Iago Oliveira</h1>
+        <nav class="nav" aria-label="Principal">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#home">Home</a></li>
+            <li><a class="nav__link" href="#projects">Projetos</a></li>
+            <li><a class="nav__link" href="#contact">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="container hero__content">
+          <img id="avatar" class="hero__avatar" src="https://github.com" alt="Foto de perfil de Iago Oliveira" />
+          <h2 class="hero__title">Iago Oliveira</h2>
+          <p class="hero__subtitle">
+            Engenheiro de Software focado em IA, automação e sistemas escaláveis.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">Ver Projetos</a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--ghost"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJETOS -->
+      <section class="section" id="projects">
+        <div class="container">
+          <header class="section__header">
+            <h2 class="section__title">Projetos</h2>
+            <p class="hero__subtitle">Principais trabalhos e repositórios</p>
+          </header>
+          <!-- O Flexbox vai organizar os cards dentro desta div -->
+          <div class="grid" id="projectList">
+            <!-- Os cards serão inseridos aqui pelo script.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section class="section" id="contact">
+        <div class="container">
+          <header class="section__header">
+            <h2 class="section__title">Contato</h2>
+            <p class="hero__subtitle">Vamos conversar sobre o seu próximo projeto?</p>
+          </header>
+          
+          <div class="contact-wrapper">
+            <address style="font-style: normal;">
+              <a href="mailto:iagooliveira09@outlook.com" class="contact-item">
+                iagooliveira09@outlook.com
+              </a>
+            </address>
+            
+            <a href="tel:+5577988162530" class="contact-item">
+              <span id="phone">77-988162530</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 - Iago Oliveira</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
