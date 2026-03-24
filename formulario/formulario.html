@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/form.css" />
+
+    <!-- Ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <h1 class="logo">Iago Oliveira</h1>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+      </div>
+    </header>
+
+    <main style="padding-top: 100px">
+      <section class="section">
+        <div class="container">
+          <header class="section__header">
+            <h2 class="section__title">Formulário de Contato</h2>
+            <p class="hero__subtitle">Preencha os dados abaixo</p>
+          </header>
+
+          <form id="contactForm" class="form">
+            <div class="form-group">
+              <label>Nome</label>
+              <input type="text" name="name" placeholder="Seu nome" />
+            </div>
+
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="seu@email.com" />
+            </div>
+
+            <div class="form-group">
+              <label>Telefone</label>
+              <input type="tel" name="phone" placeholder="(77) 99999-9999" />
+            </div>
+
+            <div class="form-group">
+              <label>Assunto</label>
+              <select name="subject">
+                <option value="" disabled selected>Selecione</option>
+                <option value="consultancy">Consultoria</option>
+                <option value="lecture">Palestra</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Mensagem</label>
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Digite sua mensagem"
+              ></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input type="checkbox" name="subscriber" id="subscriber" />
+              <label for="subscriber">Quero receber novidades por email</label>
+            </div>
+
+            <button type="submit" class="btn btn--primary">
+              Enviar mensagem
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 - Iago Oliveira</p>
+      </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="./assets/js/form.js"></script>
+  </body>
+</html>

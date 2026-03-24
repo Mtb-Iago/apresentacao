@@ -8,6 +8,20 @@
   --muted: #94a3b8;
   --border: rgba(255, 255, 255, 0.06);
   --radius: 16px;
+  --cardHover: rgba(0, 0, 0, 0.5);
+  --contactBg: linear-gradient(145deg, #0b1220, #020617) --navText: #94a3b8;
+}
+
+body.light {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --text: #0f172a;
+  --border: rgba(0, 0, 0, 0.08);
+  --muted: #0f172a;
+  --cardHover: rgba(218, 217, 217, 0.74);
+  --contactBg: #fff;
+  --navText: #fff;
 }
 
 * {
@@ -22,9 +36,35 @@ html {
 
 body {
   font-family: "Inter", system-ui, sans-serif;
-  background: radial-gradient(circle at top, #0f172a, #020617 70%);
+  background: var(--bg);
   color: var(--text);
+  transition:
+    background 0.3s,
+    color 0.3s;
   line-height: 1.6;
+}
+
+.theme-toggle {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
 }
 
 .container {
@@ -33,7 +73,7 @@ body {
   padding-inline: 20px;
 }
 
-/* HEADER - FLEX */
+
 .header {
   position: fixed;
   width: 100%;
@@ -59,16 +99,39 @@ body {
 
 .nav__link {
   text-decoration: none;
-  color: var(--muted);
+  color: var(--navText);
   position: relative;
-  transition: 0.3s;
+  transition: color 0.25s ease;
 }
+
 
 .nav__link:hover {
-  color: var(--text);
+  color: var(--navText);
 }
 
-/* HERO - FLEX */
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  color: var(--navText);
+}
+
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -112,7 +175,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* BOTÃO BASE */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -129,7 +192,59 @@ body {
   transition: all 0.25s ease;
 }
 
-/* PROJETOS */
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.about__text {
+  font-size: 1.125rem;
+  color: #94a3b8; 
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about__text strong {
+  color: #f1f5f9; 
+}
+
+.highlight {
+  color: #818cf8; 
+  font-weight: 600;
+}
+
+
+.about__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.badge {
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  color: #a5b4fc;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: #818cf8;
+  transform: translateY(-2px);
+}
+
+
 .btn--primary {
   background: linear-gradient(135deg, #6366f1, #4f46e5);
   color: white;
@@ -153,7 +268,7 @@ body {
   background: #000;
 }
 
-/* HOVER GLOBAL */
+
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -174,7 +289,7 @@ body {
   color: var(--text);
 }
 
-/* SECTION HEADERS */
+
 .section {
   padding: 50px 0;
 }
@@ -206,7 +321,7 @@ body {
   gap: 12px;
   padding: 24px;
 
-  background: linear-gradient(145deg, #0b1220, #020617);
+  background: var(--card);
   border-radius: var(--radius);
   border: 1px solid var(--border);
 
@@ -246,15 +361,12 @@ body {
   text-decoration: underline;
 }
 
-/* HOVER */
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-}
 
 .card:hover {
   transform: translateY(-6px);
-  border-color: var(--primary);
+  box-shadow: 0 20px 40px var(--cardHover);
+  border-color: var(--border);
+  cursor: pointer;
 }
 
 .contact-wrapper {
@@ -283,7 +395,7 @@ body {
   text-decoration: none;
   color: var(--text);
 
-  background: linear-gradient(145deg, #0b1220, #020617);
+  background: var(--contactBg);
   border: 1px solid var(--border);
 
   transition: all 0.25s ease;
@@ -297,8 +409,8 @@ body {
 
 .contact-item:hover {
   transform: translateY(-2px);
-  border-color: var(--primary);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  border-color: var(--border);
+  box-shadow: 0 10px 25px var(--cardHover);
 }
 
 .footer {
@@ -311,6 +423,16 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--muted);
+}
+
+@media (min-width: 992px) {
+  .about__grid {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .about__skills {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 600px) {

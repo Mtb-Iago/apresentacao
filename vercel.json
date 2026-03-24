@@ -1,3 +1,17 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/contato",
+      "destination": "/formulario/formulario.html"
+    },
+    {
+      "source": "/sobre",
+      "destination": "/pos-graduacao-atividade1/sobre-mim.html"
+    }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "status": 404, "dest": "/404.html" }
+  ]
 }

@@ -1,12 +1,10 @@
-const username = "Mtb-iago";
-
 async function loadGitHubData() {
   try {
     const userRes = await fetch(`https://api.github.com/users/${username}`);
     const user = await userRes.json();
     document.getElementById("avatar").src = user.avatar_url;
 
-    const repoRes = await fetch(`https://api.github.com/users/${username}/repos?sort=updated`);
+    const repoRes = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed`);
     const repos = await repoRes.json();
 
     const container = document.getElementById("projectList");

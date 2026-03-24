@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Página Não Encontrada | Iago Oliveira</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      .error-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 70vh;
+        text-align: center;
+      }
+      .error-code {
+        font-size: 8rem;
+        font-weight: 800;
+        color: var(--primary);
+        line-height: 1;
+        margin-bottom: 1rem;
+        text-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <h1 class="logo">Iago Oliveira</h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="error-page">
+        <div class="error-code">404</div>
+        <h2 class="section__title">Oops! Rota não encontrada.</h2>
+        <p class="hero__subtitle" style="margin-bottom: 2rem">
+          Parece que você tentou acessar um endpoint que não existe ou foi
+          movido.
+        </p>
+        <a href="/" class="btn btn--primary">
+          <i class="fa-solid fa-house"></i>
+          <span>Voltar para a Home</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 - Iago Oliveira</p>
+      </div>
+    </footer>
+  </body>
+</html>
