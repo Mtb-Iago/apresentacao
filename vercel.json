@@ -3,15 +3,11 @@
   "rewrites": [
     {
       "source": "/contato",
-      "destination": "/formulario/formulario.html"
+      "destination": "/formulario/formulario"
     },
     {
       "source": "/sobre",
-      "destination": "/pos-graduacao-atividade1/sobre-mim.html"
+      "destination": "/pos-graduacao-atividade1/sobre-mim"
     }
-  ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "status": 404, "dest": "/404.html" }
   ]
 }
