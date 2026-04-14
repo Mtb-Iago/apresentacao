@@ -1,5 +1,3 @@
-const username = "Mtb-iago";
-
 const themeToggle = document.getElementById("themeToggle");
 
 const savedTheme = localStorage.getItem("theme");
@@ -15,6 +13,5 @@ themeToggle.addEventListener("click", () => {
   const isLight = document.body.classList.contains("light");
 
   themeToggle.textContent = isLight ? "☀️" : "🌙";
-
   localStorage.setItem("theme", isLight ? "light" : "dark");
 });

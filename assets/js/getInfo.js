@@ -1,3 +1,4 @@
+const username = "Mtb-Iago";
 async function loadGitHubData() {
   try {
     const userRes = await fetch(`https://api.github.com/users/${username}`);
@@ -15,7 +16,7 @@ async function loadGitHubData() {
       article.innerHTML = `
         <h3>${repo.name}</h3>
         <p>${repo.description || "Sem descrição"}</p>
-        <a href="${repo.html_url}" target="_blank">Ver projeto →</a>
+        <a href="${repo.html_url}" target="_blank"><i class="fa-solid fa-code"></i> Ver projeto →</a>
       `;
       container.appendChild(article);
     });
